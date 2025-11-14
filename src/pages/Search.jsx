@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import axios from 'axios'
 import SearchResults from '../components/SearchResults'
 import SkeletonLoader from '../components/SkeletonLoader'
+import API_BASE_URL from '../config';
 
 const Search = () => {
   const [searchParams] = useSearchParams()
@@ -32,7 +33,7 @@ const Search = () => {
     // Start TMDB search immediately
     setTmdbLoading(true)
     try {
-      const searchResponse = await axios.get(`http://localhost:3001/api/tmdb/search?query=${encodeURIComponent(searchQuery)}`)
+      const searchResponse = await axios.get(`${API_BASE_URL}/api/tmdb/search?query=${encodeURIComponent(searchQuery)}`);
       setSearchResults(prev => ({
         ...prev,
         tmdbResults: searchResponse.data.results || []
@@ -47,7 +48,7 @@ const Search = () => {
     // Start AI recommendations in parallel
     setAiLoading(true)
     try {
-      const recommendResponse = await axios.get(`http://localhost:3001/api/ai/recommend?query=${encodeURIComponent(searchQuery)}`)
+      const recommendResponse = await axios.get(`${API_BASE_URL}/api/ai/recommend?query=${encodeURIComponent(searchQuery)}`);
       setSearchResults(prev => ({
         ...prev,
         recommendations: recommendResponse.data.recommendations || []
