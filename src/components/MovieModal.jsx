@@ -89,7 +89,7 @@ const MovieModal = ({ movie, onClose }) => {
       )
     }
   }
-
+  
   // Like, Skip & Watchlist (with GSAP)
   const handleUpvote = () => {
     if (vote === "up") {
@@ -302,3 +302,4 @@ const MovieModal = ({ movie, onClose }) => {
 }
 
 export default MovieModal
+
