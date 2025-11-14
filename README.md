@@ -1,4 +1,4 @@
-<h1>🎬 MovieFlix Frontend</h1>
+<h1>🎬 CineAIra </h1>
 
 <p>
 A modern movie discovery application built with <strong>React</strong>, 
@@ -24,49 +24,8 @@ A modern movie discovery application built with <strong>React</strong>,
   <li>Axios (API Calls)</li>
 </ul>
 
-<h2>🚀 Getting Started</h2>
+<p>WebSite: <strong>https://cineaira.vercel.app</strong></p>
 
-<h3>1. Install Dependencies</h3>
-<pre><code>npm install
-</code></pre>
-
-<h3>2. Start Development Server</h3>
-<pre><code>npm run dev
-</code></pre>
-
-<p>Open your browser at: <strong>http://localhost:5173</strong></p>
-
-<h2>🔗 Backend Requirements</h2>
-
-<p>The backend server must run at: <strong>http://localhost:3001</strong></p>
-
-<h3>Available API Endpoints</h3>
-<ul>
-  <li><code>GET /api/tmdb/nowplaying</code></li>
-  <li><code>GET /api/tmdb/popular</code></li>
-  <li><code>GET /api/tmdb/toprated</code></li>
-  <li><code>GET /api/tmdb/trending</code></li>
-  <li><code>GET /api/tmdb/search?query=</code></li>
-  <li><code>GET /api/ai/recommend?query=</code></li>
-</ul>
-
-<h2>📁 Project Structure</h2>
-
-<pre><code>src/
-├── components/
-│   ├── Navbar.jsx
-│   ├── HeroSection.jsx
-│   ├── MovieRow.jsx
-│   ├── MovieCard.jsx
-│   ├── SearchResults.jsx
-│   └── SkeletonLoader.jsx
-├── pages/
-│   ├── Home.jsx
-│   └── Search.jsx
-├── App.jsx
-├── index.css
-└── main.jsx
-</code></pre>
 
 <h2>📌 Features in Detail</h2>
 
@@ -104,6 +63,6 @@ A modern movie discovery application built with <strong>React</strong>,
 
 <h2>📢 Final Notes</h2>
 <p>
-MovieFlix delivers a smooth, modern movie browsing experience with fast performance, 
+CineAIra delivers a smooth, modern movie browsing experience with fast performance, 
 beautiful animations, and AI-powered recommendations.
 </p>
