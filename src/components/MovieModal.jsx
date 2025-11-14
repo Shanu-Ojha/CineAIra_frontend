@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import API_BASE_URL from '../config';
+
 library.add(faPlay);
 
 import { gsap } from 'gsap'
@@ -65,7 +67,7 @@ const MovieModal = ({ movie, onClose }) => {
       setLoadingTrailer(true)
       setShowTrailer(true)
 
-      const res = await fetch(`http://localhost:3001/api/tmdb/trailer/${movie.id}`)
+      const res = await fetch(`${API_BASE_URL}/api/tmdb/trailer/${movie.id}`);
       const data = await res.json()
 
       if (data.key) {
@@ -305,3 +307,4 @@ const MovieModal = ({ movie, onClose }) => {
 }
 
 export default MovieModal
+
