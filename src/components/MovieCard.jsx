@@ -37,7 +37,7 @@ const MovieCard = ({ movie, onClick }) => {
   return (
     <div
       ref={cardRef}
-      className="flex-shrink-0 w-48 cursor-pointer group"
+      className="flex-shrink-0 w-28 sm:w-32 md:w-48 cursor-pointer group"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={() => onClick && onClick(movie)}
@@ -45,14 +45,14 @@ const MovieCard = ({ movie, onClick }) => {
       <div className="relative overflow-hidden rounded-lg shadow-lg">
         <img
           src={posterUrl}
-          alt={movie.title || movie.name}
-          className="w-full h-72 object-cover transition-transform duration-300"
+          alt={movie.title}
+          className="w-full h-40 sm:h-48 md:h-72 object-cover"
         />
 
         {/* Heart Icon */}
         <button
           onClick={toggleLike}
-          className="absolute top-2 right-2 z-10 p-1 bg-black/40 rounded-full hover:bg-black/70 transition-colors duration-200"
+          className="absolute top-1 right-1 sm:top-2 sm:right-2 p-1 bg-black/40 rounded-full"
           aria-label={isLiked ? "Unfavorite movie" : "Favorite movie"}
           tabIndex={0}
         >
@@ -85,9 +85,8 @@ const MovieCard = ({ movie, onClick }) => {
 
         {/* Overlay */}
         <div
-          className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent transition-opacity duration-300 ${
-            isHovered ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <h3 className="text-white font-semibold text-sm mb-2 line-clamp-2">
