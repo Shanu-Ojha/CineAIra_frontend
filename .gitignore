@@ -1,0 +1,38 @@
+# ----- LOGS -----
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ----- FRONTEND (Vite/React) -----
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# ----- BACKEND (Node/Express) -----
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/uploads/
+backend/*.local
+
+# ----- GLOBAL NODE -----
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# ----- EDITOR -----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
