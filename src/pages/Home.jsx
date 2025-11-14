@@ -4,6 +4,9 @@ import axios from 'axios'
 import MovieRow from '../components/MovieRow'
 import HeroSection from '../components/HeroSection'
 import MovieModal from '../components/MovieModal'
+import API_BASE_URL from '../config';
+
+
 
 
 const Home = () => {
@@ -18,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const baseURL = 'http://localhost:3001/api/tmdb'
+        const baseURL = `${API_BASE_URL}/api/tmdb`;
 
         const [nowPlayingRes, popularRes, topRatedRes, trendingRes] = await Promise.all([
           axios.get(`${baseURL}/nowplaying`),
@@ -80,3 +83,4 @@ const Home = () => {
 }
 
 export default Home
+
