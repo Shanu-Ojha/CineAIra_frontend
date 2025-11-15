@@ -156,7 +156,7 @@ const MovieModal = ({ movie, onClose }) => {
           {/* CLOSE BUTTON */}
           <button
             onClick={onClose}
-            className="absolute top-3 right-4 text-3xl text-white/80 hover:text-white"
+            className="absolute top-3 right-4 text-3xl text-white/80 hover:text-white z-50"
           >
             &times;
           </button>
@@ -304,6 +304,7 @@ const MovieModal = ({ movie, onClose }) => {
 }
 
 export default MovieModal
+
 
 
 
