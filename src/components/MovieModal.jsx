@@ -292,6 +292,7 @@ const MovieModal = ({ movie, onClose }) => {
               ref={trailerIframeRef}
               onLoad={handleIframeLoad}
               allow="autoplay"
+              allowFullScreen
               className="w-[90%] sm:w-[80%] md:w-[900px] h-48 sm:h-72 md:h-[500px] rounded-xl shadow-xl"
               src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1`}
             />
@@ -303,5 +304,6 @@ const MovieModal = ({ movie, onClose }) => {
 }
 
 export default MovieModal
+
 
 
